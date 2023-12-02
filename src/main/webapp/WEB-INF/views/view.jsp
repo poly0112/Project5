@@ -19,6 +19,7 @@
         <tr><td>Title:</td><td>${u.title}</td></tr>
         <tr><td>Writer:</td><td>${u.writer}</td></tr>
         <tr><td>Category:</td><td>${u.category} </td></tr>
+        <tr><td>Revision Date:</td><td>${u.regdate} </td></tr>
         <tr><td>Content:</td><td>${u.content}</td></tr>
     </table>
     <input type="button" value="list" onclick="history.back()">

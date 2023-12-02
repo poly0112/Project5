@@ -49,13 +49,13 @@
         <th>Delete</th>
     </tr>
 <c:forEach items="${list}" var="u">
-    <tr onclick="location.href='view/${u.seq}'">
-        <td>${u.seq}</td>
-        <td>${u.title}</td>
-        <td>${u.writer}</td>
-        <td>${u.category}</td>
-        <td>${u.content}</td>
-        <td>${u.regdate}</td>
+    <tr>
+        <td onclick="location.href='view/${u.seq}'">${u.seq}</td>
+        <td onclick="location.href='view/${u.seq}'">${u.title}</td>
+        <td onclick="location.href='view/${u.seq}'">${u.writer}</td>
+        <td onclick="location.href='view/${u.seq}'">${u.category}</td>
+        <td onclick="location.href='view/${u.seq}'">${u.content}</td>
+        <td onclick="location.href='view/${u.seq}'">${u.regdate}</td>
         <td><a href="editform/${u.seq}">edit</a></td>
         <td><a href="javascript:delete_ok('${u.seq}')">delete</a></td>
     </tr>
