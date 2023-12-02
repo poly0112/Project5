@@ -49,7 +49,7 @@
         <th>Delete</th>
     </tr>
 <c:forEach items="${list}" var="u">
-    <tr>
+    <tr onclick="location.href='view/${u.seq}'">
         <td>${u.seq}</td>
         <td>${u.title}</td>
         <td>${u.writer}</td>
