@@ -1,5 +1,6 @@
 package com.example.board;
 
+import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -11,35 +12,25 @@ import java.util.List;
 @Repository
 public class BoardDAO {
     @Autowired
-    JdbcTemplate jdbcTemplate;
-
+    SqlSession sQlSession;
     public int insertBoard(BoardVO vo){
-        String sql="insert into BOARD2(title,writer,category,content) values("
-                +"'"+vo.getTitle()+"',"
-                +"'"+vo.getWriter()+"',"
-                +"'"+vo.getCategory()+"',"
-                +"'"+vo.getContent()+"')";
-        System.out.println(vo.getSeq());
-        return jdbcTemplate.update(sql);
+        int result =sQlSession.insert("Board.insertBoard",vo);
+        return result;
     }
     public int deleteBoard(int seq){
-        String sql="delete from BOARD2 where seq = "+seq;
-        return jdbcTemplate.update(sql);
+        int result =sQlSession.delete("Board.deleteBoard",vo);
+        return result;
     }
     public int updateBoard(BoardVO vo){
-        String sql="update BOARD2 set title='" + vo.getTitle() +"',"
-                +" writer='" +vo.getWriter() +"',"
-                +" category='" +vo.getCategory() +"',"
-                +" content='" +vo.getContent() +"' where seq= "+vo.getSeq();
-        return jdbcTemplate.update(sql);
+        int result =sQlSession.update("Board.updateBoard",vo);
+        return result;
    }
     public BoardVO getBoard(int seq){
-        String sql="select * from BOARD2 where seq=" + seq;
-        return jdbcTemplate.queryForObject(sql,new BoardRowMapper());
+        BoardVO one =sQlSession.selectOne("Board.getBoard",seq);
+        return one;
     }
     public List<BoardVO> getBoardList(){
-        String sql="select * from BOARD2 order by seq desc";
-        List<BoardVO> list= jdbcTemplate.query(sql, new BoardRowMapper());
+        List<BoardVO> list=sQlSession.selectList("Board.getBoardlist");
         return list;
     }
 
