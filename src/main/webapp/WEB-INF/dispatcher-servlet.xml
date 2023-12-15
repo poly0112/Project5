@@ -11,4 +11,14 @@
         <property name="prefix" value="/WEB-INF/views/" />
         <property name="suffix" value=".jsp" />
     </bean>
+    <bean id="LoginInterceptor" class="com.example.user.LoginIntercepter"></bean>
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <mvc:exclude-mapping path="/resources/**"/>
+            <mvc:exclude-mapping path="/img/**"/>
+            <mvc:exclude-mapping path="/login/*"/>
+            <ref bean ="LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors>
 </beans>
