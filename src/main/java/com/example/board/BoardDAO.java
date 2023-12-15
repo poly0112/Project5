@@ -17,16 +17,16 @@ public class BoardDAO {
         int result =sQlSession.insert("Board.insertBoard",vo);
         return result;
     }
-    public int deleteBoard(int seq){
-        int result =sQlSession.delete("Board.deleteBoard",vo);
+    public int deleteBoard(int id){
+        int result =sQlSession.delete("Board.deleteBoard",id);
         return result;
     }
     public int updateBoard(BoardVO vo){
         int result =sQlSession.update("Board.updateBoard",vo);
         return result;
    }
-    public BoardVO getBoard(int seq){
-        BoardVO one =sQlSession.selectOne("Board.getBoard",seq);
+    public BoardVO getBoard(int id){
+        BoardVO one =sQlSession.selectOne("Board.getBoard",id);
         return one;
     }
     public List<BoardVO> getBoardList(){
