@@ -18,7 +18,7 @@ public class BoardDAO {
         return result;
     }
     public int deleteBoard(int seq){
-        int result =sQlSession.delete("Board.deleteBoard",vo);
+        int result =sQlSession.delete("Board.deleteBoard", seq);
         return result;
     }
     public int updateBoard(BoardVO vo){

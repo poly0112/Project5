@@ -15,7 +15,7 @@ public class LoginController {
     @Autowired
     UserService userService;
 
-    @RequestMapping(value="/login", method= RequestMethod.POST)
+    @RequestMapping(value="/login")
     public String login(Model model) {
         return "login";
     }
@@ -39,7 +39,7 @@ public class LoginController {
         //로그인 실패 시
         else {
             System.out.println("로그인 실패");
-            returnURL = "resifrect:/login/login";
+            returnURL = "redirect:/login/login";
         }
         return returnURL;
     }
