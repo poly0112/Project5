@@ -5,6 +5,7 @@
 <configuration>
     <typeAliases>
         <typeAlias alias="board" type="com.example.board.BoardVO"></typeAlias>
+        <typeAlias alias="user" type="com.example.user.UserVO"></typeAlias>
     </typeAliases>
     <environments default="development">
         <environment id="development">
@@ -17,7 +18,5 @@
             </dataSource>
         </environment>
     </environments>
-    <mappers>
-        <mapper resource="mappers/board-mapper.xml"/>
-    </mappers>
+
 </configuration>
