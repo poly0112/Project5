@@ -14,7 +14,7 @@
 <body>
 <h1>Edit Post</h1>
 <form commandName="boardVO" method="post" action="../editok">
-    <input type="hidden" name="seq" value=${u.seq} />
+    <input type="hidden" name="seq" value=${u.id} />
     <table id="edit">
         <tr><td>Title:</td><td><input type="text" name="title" value=${u.title} /></td></tr>
         <tr><td>Writer:</td><td><input type="text" name="writer" value=${u.writer} /></td></tr>

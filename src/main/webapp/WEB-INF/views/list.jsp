@@ -36,28 +36,30 @@
     </script>
 </head>
 <body>
-<h1>자유게시판</h1>
+<h1>예식장 예약</h1>
 <table id="list" width="90%">
     <tr>
         <th>Id</th>
-        <th>Title</th>
-        <th>Writer</th>
-        <th>category</th>
-        <th>Content</th>
-        <th>Regdate</th>
-        <th>Edit</th>
-        <th>Delete</th>
+        <th>이름</th>
+        <th>나이</th>
+        <th>성별</th>
+        <th>핸드폰 번호</th>
+        <th>예약 날짜</th>
+        <th>식권 개수</th>
+        <th>수정일</th>
+        <th>수정</th>
+        <th>삭제</th>
     </tr>
 <c:forEach items="${list}" var="u">
     <tr>
-        <td onclick="location.href='view/${u.seq}'">${u.seq}</td>
-        <td onclick="location.href='view/${u.seq}'">${u.title}</td>
-        <td onclick="location.href='view/${u.seq}'">${u.writer}</td>
-        <td onclick="location.href='view/${u.seq}'">${u.category}</td>
-        <td onclick="location.href='view/${u.seq}'">${u.content}</td>
-        <td onclick="location.href='view/${u.seq}'">${u.regdate}</td>
-        <td><a href="editform/${u.seq}">edit</a></td>
-        <td><a href="javascript:delete_ok('${u.seq}')">delete</a></td>
+        <td onclick="location.href='view/${u.id}'">${u.seq}</td>
+        <td onclick="location.href='view/${u.id}'">${u.title}</td>
+        <td onclick="location.href='view/${u.id}'">${u.writer}</td>
+        <td onclick="location.href='view/${u.id}'">${u.category}</td>
+        <td onclick="location.href='view/${u.id}'">${u.content}</td>
+        <td onclick="location.href='view/${u.id}'">${u.regdate}</td>
+        <td><a href="editform/${u.id}">edit</a></td>
+        <td><a href="javascript:delete_ok('${u.id}')">delete</a></td>
     </tr>
 </c:forEach>
 </table>

@@ -14,7 +14,7 @@
 <body>
 <h1>View Post</h1>
 <form commandName="boardVO">
-    <input type="hidden" name="seq" value=${u.seq} />
+    <input type="hidden" name="seq" value=${u.id} />
     <table id="view">
         <tr><td>Title:</td><td>${u.title}</td></tr>
         <tr><td>Writer:</td><td>${u.writer}</td></tr>

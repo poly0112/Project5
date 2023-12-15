@@ -3,56 +3,77 @@ package com.example.board;
 import java.util.Date;
 
 public class BoardVO {
-    private int seq;
-    private String title;
+    private int id;
+    private String name;
 
-    private String category;
-    private String writer;
-    private String content;
+    private String age;
+    private String gender;
+    private String phone;
+    private Date reservation;
+    private int tiket;
     private Date regdate;
-    private int cnt;
 
-    public int getSeq() {
-        return seq;
-    }
-    public void setSeq(int seq) {
-        this.seq = seq;
-    }
-    public String getTitle() {
-        return title;
-    }
-    public void setTitle(String title) {
-        this.title = title;
-    }
-    public String getCategory() {
-        return category;
+    public int getId() {
+        return id;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public void setId(int id) {
+        this.id = id;
     }
-    public String getWriter() {
-        return writer;
+
+    public String getName() {
+        return name;
     }
-    public void setWriter(String writer) {
-        this.writer = writer;
+
+    public void setName(String name) {
+        this.name = name;
     }
-    public String getContent() {
-        return content;
+
+    public String getAge() {
+        return age;
     }
-    public void setContent(String content) {
-        this.content = content;
+
+    public void setAge(String age) {
+        this.age = age;
     }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
+    }
+
+    public Date getReservation() {
+        return reservation;
+    }
+
+    public void setReservation(Date reservation) {
+        this.reservation = reservation;
+    }
+
+    public int getTiket() {
+        return tiket;
+    }
+
+    public void setTiket(int tiket) {
+        this.tiket = tiket;
+    }
+
     public Date getRegdate() {
         return regdate;
     }
+
     public void setRegdate(Date regdate) {
         this.regdate = regdate;
-    }
-    public int getCnt() {
-        return cnt;
-    }
-    public void setCnt(int cnt) {
-        this.cnt = cnt;
     }
 }

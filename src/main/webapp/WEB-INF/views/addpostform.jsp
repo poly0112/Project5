@@ -8,7 +8,7 @@
 </head>
 <body>
 
-<h1>Add New Post</h1>
+<h1>예약자 추가하기</h1>
 <form action="addok" method="post">
     <table id="edit">
         <tr><td>Title:</td><td><input type="text" name="title"/></td></tr>
