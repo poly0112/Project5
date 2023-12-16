@@ -3,9 +3,8 @@ package com.example.board;
 import java.util.Date;
 
 public class BoardVO {
-    private int id;
+    private int seq;
     private String name;
-
     private String age;
     private String gender;
     private String phone;
@@ -13,12 +12,12 @@ public class BoardVO {
     private int tiket;
     private Date regdate;
 
-    public int getId() {
-        return id;
+    public int getSeq() {
+        return seq;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setSeq(int seq) {
+        this.seq = seq;
     }
 
     public String getName() {
