@@ -9,7 +9,7 @@
     </insert>
     <update id="updateBoard">
         update wedding
-        set name=#{name}, age=#{age},gender=#{gender}, phone=#{phone}, reservation=#{reservation}, tiket=#{tiket}, where seq=#{seq}
+        set name=#{name}, age=#{age},gender=#{gender}, phone=#{phone}, reservation=#{reservation}, tiket=#{tiket} where seq=#{seq}
     </update>
     <delete id="deleteBoard">
         delete from wedding where seq=#{seq}

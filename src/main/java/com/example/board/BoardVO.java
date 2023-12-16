@@ -8,7 +8,7 @@ public class BoardVO {
     private String age;
     private String gender;
     private String phone;
-    private Date reservation;
+    private String reservation;
     private int tiket;
     private Date regdate;
 
@@ -52,11 +52,11 @@ public class BoardVO {
         this.phone = phone;
     }
 
-    public Date getReservation() {
+    public String getReservation() {
         return reservation;
     }
 
-    public void setReservation(Date reservation) {
+    public void setReservation(String reservation) {
         this.reservation = reservation;
     }
 
