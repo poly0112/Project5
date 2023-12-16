@@ -15,7 +15,6 @@ class BoardRowMapper implements RowMapper<BoardVO> {
         vo.setAge(rs.getString("age"));
         vo.setGender(rs.getString("gender"));
         vo.setPhone(rs.getString("phone"));
-        vo.setReservation(rs.getDate("reservation"));
         vo.setTiket(rs.getInt("tiket"));
         vo.setRegdate(rs.getDate("regdate"));
         return vo;

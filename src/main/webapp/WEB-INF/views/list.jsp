@@ -52,16 +52,16 @@
     </tr>
     <c:forEach items="${list}" var="u">
         <tr>
-            <td onclick="location.href='view/${u.id}'">${u.seq}</td>
-            <td onclick="location.href='view/${u.id}'">${u.name}</td>
-            <td onclick="location.href='view/${u.id}'">${u.age}</td>
-            <td onclick="location.href='view/${u.id}'">${u.gender}</td>
-            <td onclick="location.href='view/${u.id}'">${u.phone}</td>
-            <td onclick="location.href='view/${u.id}'">${u.reservation}</td>
-            <td onclick="location.href='view/${u.id}'">${u.tiket}</td>
-            <td onclick="location.href='view/${u.id}'">${u.regdate}</td>
-            <td><a href="editform/${u.id}">edit</a></td>
-            <td><a href="javascript:delete_ok('${u.id}')">delete</a></td>
+            <td onclick="location.href='view/${u.seq}'">${u.seq}</td>
+            <td onclick="location.href='view/${u.seq}'">${u.name}</td>
+            <td onclick="location.href='view/${u.seq}'">${u.age}</td>
+            <td onclick="location.href='view/${u.seq}'">${u.gender}</td>
+            <td onclick="location.href='view/${u.seq}'">${u.phone}</td>
+            <td onclick="location.href='view/${u.seq}'">${u.reservation}</td>
+            <td onclick="location.href='view/${u.seq}'">${u.tiket}</td>
+            <td onclick="location.href='view/${u.seq}'">${u.regdate}</td>
+            <td><a href="editform/${u.seq}">edit</a></td>
+            <td><a href="javascript:delete_ok('${u.seq}')">delete</a></td>
         </tr>
     </c:forEach>
 </table>
