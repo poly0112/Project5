@@ -14,13 +14,14 @@
 <body>
 <h1>View Post</h1>
 <form commandName="boardVO">
-    <input type="hidden" name="seq" value=${u.id} />
+    <input type="hidden" name="seq" value=${u.seq} />
     <table id="view">
-        <tr><td>Title:</td><td>${u.title}</td></tr>
-        <tr><td>Writer:</td><td>${u.writer}</td></tr>
-        <tr><td>Category:</td><td>${u.category} </td></tr>
-        <tr><td>Revision Date:</td><td>${u.regdate} </td></tr>
-        <tr><td>Content:</td><td>${u.content}</td></tr>
+        <tr><td>이름:</td><td>${u.name}</td></tr>
+        <tr><td>나이:</td><td>${u.age}</td></tr>
+        <tr><td>성별:</td><td>${u.gender} </td></tr>
+        <tr><td>전화번호:</td><td>${u.phone}</td></tr>
+        <tr><td>예약 날짜:</td><td>${u.reservation} </td></tr>
+        <tr><td>식권 개수:</td><td>${u.tiket}</td></tr>
     </table>
     <input type="button" value="list" onclick="history.back()">
 </form>

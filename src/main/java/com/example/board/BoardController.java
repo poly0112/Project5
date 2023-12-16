@@ -4,6 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -21,7 +22,7 @@ public class BoardController {
     public String addPost(){
         return "addpostform";
     }
-    @RequestMapping("/addok")
+    @PostMapping("/addok")
     public String addPostOk(BoardVO vo){
         if(boardService.insertBoard(vo)== 0)
             System.out.println("데이터 추가 실패");

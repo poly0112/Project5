@@ -50,18 +50,20 @@
         <th>수정</th>
         <th>삭제</th>
     </tr>
-<c:forEach items="${list}" var="u">
-    <tr>
-        <td onclick="location.href='view/${u.id}'">${u.seq}</td>
-        <td onclick="location.href='view/${u.id}'">${u.title}</td>
-        <td onclick="location.href='view/${u.id}'">${u.writer}</td>
-        <td onclick="location.href='view/${u.id}'">${u.category}</td>
-        <td onclick="location.href='view/${u.id}'">${u.content}</td>
-        <td onclick="location.href='view/${u.id}'">${u.regdate}</td>
-        <td><a href="editform/${u.id}">edit</a></td>
-        <td><a href="javascript:delete_ok('${u.id}')">delete</a></td>
-    </tr>
-</c:forEach>
+    <c:forEach items="${list}" var="u">
+        <tr>
+            <td onclick="location.href='view/${u.id}'">${u.seq}</td>
+            <td onclick="location.href='view/${u.id}'">${u.name}</td>
+            <td onclick="location.href='view/${u.id}'">${u.age}</td>
+            <td onclick="location.href='view/${u.id}'">${u.gender}</td>
+            <td onclick="location.href='view/${u.id}'">${u.phone}</td>
+            <td onclick="location.href='view/${u.id}'">${u.reservation}</td>
+            <td onclick="location.href='view/${u.id}'">${u.tiket}</td>
+            <td onclick="location.href='view/${u.id}'">${u.regdate}</td>
+            <td><a href="editform/${u.id}">edit</a></td>
+            <td><a href="javascript:delete_ok('${u.id}')">delete</a></td>
+        </tr>
+    </c:forEach>
 </table>
 <br/><a href="add">Add New Post</a>
 </body>

@@ -30,7 +30,7 @@ public class BoardDAO {
         return one;
     }
     public List<BoardVO> getBoardList(){
-        List<BoardVO> list=sQlSession.selectList("Board.getBoardlist");
+        List<BoardVO> list=sQlSession.selectList("Board.getBoardList");
         return list;
     }
 
