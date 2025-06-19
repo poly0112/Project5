@@ -11,8 +11,14 @@ LoRa 통신과 mqtt broker와 통신하기 위한 LoRa, WiFi 값을 본인 값�
 LoRa server와 동일한 SF, BANDWIDTH 값을 설정 후 실행
 
 ## MQTT broker & Flask web server
+![Image](https://github.com/user-attachments/assets/ee69e038-c583-4673-8667-31f0698ceb51)
 
+Mosquitto MQTT broker 실행
 
+<img width="358" alt="Image" src="https://github.com/user-attachments/assets/6988bf4e-ff23-4931-8df9-11ea5f764227" />
+![Image](https://github.com/user-attachments/assets/9366f604-b30c-4843-ae27-1174082b72be)
+
+MQTT broker와 local로 연결 후 python3 server.py로 Flask web server 실행
 
 ## 게임 진행 방법
 
